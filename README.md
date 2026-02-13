@@ -84,20 +84,24 @@ Session history is saved to `<project>/.claude/session-history/`:
 
 ```
 .claude/session-history/
-├── [Index]Sessions.md              # Session index
-├── [History]Title_01-15_1430_abc1.md    # Conversation
-├── [ToolUse]Title_01-15_1430_abc1.md    # Tool details
-└── [Compact]Title_01-15_1430_abc1.md    # Context summary
+├── index.md                        # Session index
+├── history/
+│   └── Title_01-15_1430_abc1.md    # Conversation
+├── tooluse/
+│   └── Title_01-15_1430_abc1.md    # Tool details
+├── compact/
+│   └── Title_01-15_1430_abc1.md    # Context summary
+└── .meta/                          # Metadata files
 ```
 
 ### File Types
 
-| File | Description |
-|------|-------------|
-| `[History]*.md` | Main conversation with user/assistant messages |
-| `[ToolUse]*.md` | Tool call details with input parameters |
-| `[Compact]*.md` | Context compaction summaries |
-| `[Index]Sessions.md` | Index of all sessions |
+| Directory | Description |
+|-----------|-------------|
+| `history/*.md` | Main conversation with user/assistant messages |
+| `tooluse/*.md` | Tool call details with input parameters |
+| `compact/*.md` | Context compaction summaries |
+| `index.md` | Index of all sessions |
 
 ## Requirements
 

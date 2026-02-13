@@ -84,20 +84,24 @@ cd claude-session-saver
 
 ```
 .claude/session-history/
-├── [Index]Sessions.md              # 会话索引
-├── [History]标题_01-15_1430_abc1.md    # 对话记录
-├── [ToolUse]标题_01-15_1430_abc1.md    # 工具详情
-└── [Compact]标题_01-15_1430_abc1.md    # 上下文摘要
+├── index.md                        # 会话索引
+├── history/
+│   └── 标题_01-15_1430_abc1.md     # 对话记录
+├── tooluse/
+│   └── 标题_01-15_1430_abc1.md     # 工具详情
+├── compact/
+│   └── 标题_01-15_1430_abc1.md     # 上下文摘要
+└── .meta/                          # 元数据文件
 ```
 
 ### 文件类型
 
-| 文件 | 说明 |
+| 目录 | 说明 |
 |------|------|
-| `[History]*.md` | 主对话，包含用户和助手消息 |
-| `[ToolUse]*.md` | 工具调用详情和输入参数 |
-| `[Compact]*.md` | 上下文压缩摘要 |
-| `[Index]Sessions.md` | 所有会话索引 |
+| `history/*.md` | 主对话，包含用户和助手消息 |
+| `tooluse/*.md` | 工具调用详情和输入参数 |
+| `compact/*.md` | 上下文压缩摘要 |
+| `index.md` | 所有会话索引 |
 
 ## 依赖
 
